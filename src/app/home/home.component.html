@@ -1,0 +1,12 @@
+<section *ngIf="loadProducts" class="d-flex flex-wrap">
+    <article *ngFor="let product of fakeProducts" class="p-2 flex-fill">
+        <div class="card" style="width: 18rem;">
+            <img src="{{product.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{product.title}}</h5>
+              <p class="card-text">{{product.description}}</p>
+              <a routerLink="/product/{{product.id}}" class="btn btn-primary">More Information</a>
+            </div>
+        </div>
+    </article>
+</section>
